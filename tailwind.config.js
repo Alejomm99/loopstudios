@@ -6,7 +6,12 @@ module.exports = {
       center: true,
       padding: "15px",
     },
-    extend: {},
+
+    extend: {
+      fontFamily: {
+        sans: ["Josefin Sans", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

@@ -1,1 +1,53 @@
-<footer class="container">footer works</footer>
+<footer class="bg-black text-white py-12">
+  <div class="container">
+    <div class="flex justify-between">
+      <app-logo></app-logo>
+      <div class="flex items-center gap-3">
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ic-icon
+            [icon]="facebook"
+            class="text-4xl"
+          ></ic-icon>
+        </a>
+        <a
+          href="https://www.twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ic-icon
+            [icon]="twitter"
+            class="text-4xl"
+          ></ic-icon>
+        </a>
+        <a
+          href="https://www.pinterest.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ic-icon
+            [icon]="pinterest"
+            class="text-4xl"
+          ></ic-icon>
+        </a>
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ic-icon
+            [icon]="intagram"
+            class="text-4xl"
+          ></ic-icon>
+        </a>
+      </div>
+    </div>
+    <div class="flex justify-between mt-8">
+      <app-nav></app-nav>
+      <p class="text-zinc-400 text-sm font-medium">© 2021 Loopstudios. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

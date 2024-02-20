@@ -1,0 +1,9 @@
+<nav class="flex gap-6">
+  @for (link of links; track $index) {
+  <a
+    [routerLink]="link.path"
+    class="text-sm font-medium text-zinc-100"
+    >{{ link.text }}</a
+  >
+  }
+</nav>
