@@ -1,0 +1,39 @@
+<section class="container">
+  <div class="grid grid-cols-4">
+    <h2 class="col-span-3">Our creations</h2>
+    <button
+      class="button col-span-4 justify-self-center sm:col-span-1 sm:justify-self-end order-3 sm:order-2 mt-10 sm:mt-0"
+    >
+      see all
+    </button>
+    <div
+      class="col-span-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12 order-2 sm:order-3"
+    >
+      @for (creation of creations; track $index) {
+      <a
+        [href]="creation.link"
+        class="group"
+      >
+        <figure class="relative overflow-hidden">
+          <picture>
+            <source
+              media="(min-width: 640px)"
+              [srcset]="creation.image"
+            />
+            <img
+              [src]="creation.imageMobile || creation.image"
+              alt="Illustrative image for visual representation"
+              class="w-full h-full group-hover:scale-150 group-hover:invert transition-transform duration-300 ease-in-out"
+            />
+          </picture>
+          <figcaption
+            class="absolute bottom-0 left-0 w-full bg-black/70 group-hover:bg-black transition-colors backdrop-blur-xl py-3 px-6 h-20"
+          >
+            <h3 class="text-white group-hover:text-pink-800">{{ creation.title }}</h3>
+          </figcaption>
+        </figure></a
+      >
+      }
+    </div>
+  </div>
+</section>

@@ -3,12 +3,12 @@ import { RouterLink } from '@angular/router';
 import { navLinks } from './nav';
 
 @Component({
-  selector: 'app-nav',
+  selector: 'app-nav-mobile',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './nav.component.html',
-  styleUrl: './nav.component.css',
+  templateUrl: './nav-mobile.component.html',
+  styleUrl: './nav-mobile.component.css',
 })
-export class NavComponent {
+export class NavMobileComponent {
   links = navLinks;
 }

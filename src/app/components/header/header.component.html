@@ -1,4 +1,42 @@
-<header class="bg-red-500 flex items-center justify-between container">
-  <app-logo></app-logo>
-  <app-nav></app-nav>
+<header
+  class="text-white bg-black fixed top-0 w-full h-[90px] transition duration-300 ease-out z-10"
+  [ngClass]="{
+    'sticky top-0': !isDynamic,
+    'bg-transparent sm:h-[120px]': isDynamic && !isScrolling(),    
+  }"
+>
+  <div class="container flex items-center justify-between h-full">
+    <app-logo />
+    <div class="hidden sm:block">
+      <app-nav />
+    </div>
+
+    <button
+      class="block sm:hidden"
+      (click)="isMenuOpen.set(true)"
+    >
+      <ic-icon
+        [icon]="iconHamburgerMenu"
+        class="text-3xl"
+      ></ic-icon>
+    </button>
+  </div>
 </header>
+
+<aside
+  class="bg-black fixed h-full inset-0 z-20 w-full sm:hidden transition duration-500 ease-out overflow-hidden"
+  [ngClass]="{ 'translate-y-0': isMenuOpen(), '-translate-y-full': !isMenuOpen() }"
+>
+  <div class="container h-full">
+    <div class="h-[90px] flex items-center justify-between">
+      <app-logo />
+      <button (click)="isMenuOpen.set(false)">
+        <ic-icon
+          [icon]="iconClose"
+          class="text-3xl text-white"
+        ></ic-icon>
+      </button>
+    </div>
+    <app-nav-mobile />
+  </div>
+</aside>

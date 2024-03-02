@@ -1,0 +1,15 @@
+a span {
+  @apply relative;
+
+  &::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    @apply bg-white h-1 absolute left-0 top-full rounded;
+    @apply transition-all duration-300 ease-out w-[0%];
+  }
+
+  &:hover::after {
+    @apply w-[100%];
+  }
+}

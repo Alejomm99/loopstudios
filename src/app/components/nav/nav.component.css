@@ -1,0 +1,14 @@
+a {
+  @apply relative;
+}
+a::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  @apply bg-white h-1 absolute left-1/2 -translate-x-1/2 top-full rounded;
+  @apply transition-all duration-300 ease-out w-[0%];
+}
+
+a:hover::after {
+  @apply w-[80%];
+}

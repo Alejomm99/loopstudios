@@ -1,0 +1,11 @@
+<nav class="inline-flex flex-col gap-8 justify-center h-full">
+  @for (link of links; track $index) {
+  <a
+    [routerLink]="link.path"
+    class="text-4xl uppercase font-light text-zinc-100"
+    ><span>
+      {{ link.text }}
+    </span>
+  </a>
+  }
+</nav>

@@ -1,8 +1,8 @@
-<nav class="flex gap-6">
+<nav class="flex flex-col gap-6 sm:flex-row">
   @for (link of links; track $index) {
   <a
     [routerLink]="link.path"
-    class="text-sm font-medium text-zinc-100"
+    class="text-center font-medium text-zinc-100"
     >{{ link.text }}</a
   >
   }

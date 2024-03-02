@@ -1,0 +1,16 @@
+<div class="flex items-center gap-3">
+  @for (social of socials; track $index) {
+
+  <a
+    [href]="social.link"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="hover:scale-125 hover:-rotate-12 transition"
+  >
+    <ic-icon
+      [icon]="social.icon"
+      class="text-4xl"
+    ></ic-icon>
+  </a>
+  }
+</div>

@@ -1,1 +1,14 @@
-home
+<app-header [isDynamic]="true"></app-header>
+<app-hero
+  backgroundImage="/assets/images/desktop/image-hero.jpg"
+  backgroundImageMobile="/assets/images/mobile/image-hero.jpg"
+>
+  <h1 class="text-white sm:text-5xl md:text-6xl lg:text-7xl">
+    Immersive <br />experiences <br />that <br class="inline sm:hidden" />deliver
+  </h1>
+</app-hero>
+
+<main class="grid gap-y-32 my-32">
+  <app-section-main></app-section-main>
+  <app-section-creations></app-section-creations>
+</main>

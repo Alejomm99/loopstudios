@@ -1,0 +1,18 @@
+<figure class="h-[70vh]">
+  <picture>
+    <source
+      media="(min-width: 640px)"
+      [srcset]="backgroundImage"
+    />
+    <img
+      [src]="backgroundImageMobile || backgroundImage"
+      alt="Illustrative image for visual representation"
+      class="w-full h-full"
+    />
+  </picture>
+  <figcaption class="flex justify-center sm:justify-start relative container -top-[65%]">
+    <div class="inline-flex border-2 border-white py-5 pl-6 pr-16 sm:pr-32">
+      <ng-content></ng-content>
+    </div>
+  </figcaption>
+</figure>
